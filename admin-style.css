@@ -1,0 +1,15 @@
+/* ridiculous nesting in order to target headers in repeater fields */
+.repeater .ui-sortable > tr > .acf_input-wrap > .widefat > tbody > tr:first-child > td {
+	background: #A4B6C0;
+}
+
+/* 
+.repeater .ui-sortable > tr:nth-child(even),
+.repeater .ui-sortable > tr:nth-child(even) td {
+	background: #e8e8e8;
+}
+
+.mceFirst ~ tr td {
+	background: #fff !important;
+}
+*/

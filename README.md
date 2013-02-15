@@ -1,2 +1,1 @@
-citystay
-========
+# Website for City Stay
