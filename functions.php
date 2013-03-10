@@ -17,10 +17,6 @@ function short_excerpt($string, $wordsreturned) {
   }
   echo $retval;
 }
-function new_excerpt_more( $more ) {
-  return '...';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
 
 // Admin styles
 function my_admin_head() {

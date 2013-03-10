@@ -38,8 +38,8 @@ if (!isset($lang)) { $lang = 'en'; }
 			<?php } elseif ($lang == 'so' && get_field('body_so')) { ?>
 				<p><?php short_excerpt(get_field('body_so'), 55); ?></p>
                 <a class="more" href="<?php the_permalink(); ?>">READ MORE</a>
-			<?php } else {
-	            the_excerpt(); ?>
+			<?php } else { ?>
+	            <p><?php short_excerpt(get_the_content(), 55); ?></p>
                 <a class="more" href="<?php the_permalink(); ?>">READ MORE</a>
 			<?php } ?>
         </div>
