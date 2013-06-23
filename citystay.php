@@ -23,10 +23,10 @@ if (!isset($lang)) { $lang = 'en'; }
     	            	<p>Estudiantes de la preparatoria en las Ciudades Gemelas viven con familias locales que han sido cuidadosamente seleccionadas en la comunidad latina o somal&iacute; durante m&aacute;s que 			tres semanas.</p>
        			<?php } elseif ($lang == 'so') { ?>
                 	<h3>Homestay</h3>
-    	            	<p>Students live with carefully-matched local host families in the Latino or Somali community for over three weeks.</p>
+    	            	<p>Participants live with carefully-matched local host families of a different culture for one week.</p>
                 <?php } else { ?>
                 	<h3>Homestay</h3>
-    	            	<p>Twin Cities high school students live with carefully-matched local host families in the Latino or Somali community for over three weeks.</p>
+    	            	<p>Participants live with carefully-matched local host families of a different culture for one week.</p>
                 <?php } ?>
         	 </li>
              <li class="one-third" id="coursework">
@@ -36,10 +36,10 @@ if (!isset($lang)) { $lang = 'en'; }
                 		<p>Los estudiantes toman cursos de estudios urbanos, la cultura latina o somal&iacute;, e idioma extranjero.</p>
        			<?php } elseif ($lang == 'so') { ?>
                 	<h3>Coursework</h3>
-                		<p>Students take courses on urban studies, Latino or Somali culture, and foreign language.</p>
+                		<p>Participants engage in coursework on urban studies, immigration and culture in Minnesota.</p>
                 <?php } else { ?>
                 	<h3>Coursework</h3>
-                		<p>Students take courses on urban studies, Latino or Somali culture, and foreign language.</p>
+                		<p>Participants engage in coursework on urban studies, immigration and culture in Minnesota.</p>
                 <?php } ?>
        		 </li>
              <li class="one-third last" id="work">
@@ -49,10 +49,10 @@ if (!isset($lang)) { $lang = 'en'; }
                 		<p>Los estudiantes participan en una pasant&iacute;a o proyecto independiente en su nueva comunidad.</p>
        			<?php } elseif ($lang == 'so') { ?>
                 	<h3>Work</h3>
-                		<p>Students engage in an individually-designed internship or project in their new community.</p>
+                		<p>City Stay offers participants the option to begin an internship in their new community when the program ends.</p>
                 <?php } else { ?>
                 	<h3>Work</h3>
-                		<p>Students engage in an individually-designed internship or project in their new community.</p>
+                		<p>City Stay offers participants the option to begin an internship in their new community when the program ends.</p>
                 <?php } ?>
        		 </li>  
         
