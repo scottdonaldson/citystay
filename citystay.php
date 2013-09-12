@@ -17,40 +17,40 @@ if (!isset($lang)) { $lang = 'en'; }
 			<li class="one-third" id="homestay">
             	<?php 
 				if ($lang == 'es') { ?>
-	            	<h3>Estancia</h3>
-    	            	<p>Estudiantes de la preparatoria en las Ciudades Gemelas viven con familias locales que han sido cuidadosamente seleccionadas en la comunidad latina o somal&iacute; durante m&aacute;s que 			tres semanas.</p>
+	            	<h3>Estad&iacute;a</h3>
+    	            	<p><?php the_field('homestay_es'); ?></p>
        			<?php } elseif ($lang == 'so') { ?>
                 	<h3>Homestay</h3>
-    	            	<p>Participants live with carefully-matched local host families of a different culture for one week.</p>
+    	            	<p><?php the_field('homestay_so'); ?></p>
                 <?php } else { ?>
                 	<h3>Homestay</h3>
-    	            	<p>Participants live with carefully-matched local host families of a different culture for one week.</p>
+    	            	<p><?php the_field('homestay'); ?></p>
                 <?php } ?>
         	 </li>
              <li class="one-third" id="coursework">
              	<?php 
 				if ($lang == 'es') { ?>
 	            	<h3>Estudio</h3>
-                		<p>Los estudiantes toman cursos de estudios urbanos, la cultura latina o somal&iacute;, e idioma extranjero.</p>
+                		<p><?php the_field('coursework_es'); ?></p>
        			<?php } elseif ($lang == 'so') { ?>
                 	<h3>Coursework</h3>
-                		<p>Participants engage in coursework on urban studies, immigration and culture in Minnesota.</p>
+                		<p><?php the_field('coursework_so'); ?></p>
                 <?php } else { ?>
                 	<h3>Coursework</h3>
-                		<p>Participants engage in coursework on urban studies, immigration and culture in Minnesota.</p>
+                		<p><?php the_field('coursework'); ?></p>
                 <?php } ?>
        		</li>
             <li class="one-third last" id="work">
              	<?php 
 				if ($lang == 'es') { ?>
 	            	<h3>Trabajo</h3>
-                		<p>Los estudiantes participan en una pasant&iacute;a o proyecto independiente en su nueva comunidad.</p>
+                		<p><?php the_field('work_es'); ?></p>
        			<?php } elseif ($lang == 'so') { ?>
                 	<h3>Work</h3>
-                		<p>City Stay offers participants the option to begin an internship in their new community when the program ends.</p>
+                		<p><?php the_field('work_so'); ?></p>
                 <?php } else { ?>
                 	<h3>Work</h3>
-                		<p>City Stay offers participants the option to begin an internship in their new community when the program ends.</p>
+                		<p><?php the_field('work'); ?></p>
                 <?php } ?>
        		</li>  
         
