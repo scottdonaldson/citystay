@@ -44,7 +44,7 @@ if (!isset($lang)) { $lang = 'en'; }
              	<?php 
 				if ($lang == 'es') { ?>
 	            	<h3>Trabajo</h3>
-                		<p><?php the_field('work_es'); ?></p>
+                		<p><?php the_field('work_es1'); ?></p>
        			<?php } elseif ($lang == 'so') { ?>
                 	<h3>Work</h3>
                 		<p><?php the_field('work_so'); ?></p>
