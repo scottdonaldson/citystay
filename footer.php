@@ -70,7 +70,6 @@ if (!isset($lang)) { $lang = 'en'; }
     </div>
     <div class="alignleft credits">
     	<p class="alignleft">design + code by <a href="http://www.parsleyandsprouts.com" target="_blank">Parsley &amp; Sprouts</a></p>
-        <p class="alignleft">video by <a href="http://www.nateryan.com" target="_blank">Nate Ryan</a></p>
         <p class="alignleft">logo by <a href="mailto: sisoyuriel@gmail.com">Uriel Ernesto Saenz Saenz</a></p>
         <br/>
         <p class="alignleft">Spanish translation by <a href="mailto: maidaca85@gmail.com">Marco Dávila</a></p>
