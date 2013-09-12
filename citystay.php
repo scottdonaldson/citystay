@@ -7,8 +7,6 @@ $lang = $_GET['lang'] ? $_GET['lang'] : $_COOKIE['citystay_lang'];
 if (!isset($lang)) { $lang = 'en'; }
 ?>
 
-
-    
 <section <?php post_class(); ?>>
 	
 	
@@ -41,8 +39,8 @@ if (!isset($lang)) { $lang = 'en'; }
                 	<h3>Coursework</h3>
                 		<p>Participants engage in coursework on urban studies, immigration and culture in Minnesota.</p>
                 <?php } ?>
-       		 </li>
-             <li class="one-third last" id="work">
+       		</li>
+            <li class="one-third last" id="work">
              	<?php 
 				if ($lang == 'es') { ?>
 	            	<h3>Trabajo</h3>
@@ -54,7 +52,7 @@ if (!isset($lang)) { $lang = 'en'; }
                 	<h3>Work</h3>
                 		<p>City Stay offers participants the option to begin an internship in their new community when the program ends.</p>
                 <?php } ?>
-       		 </li>  
+       		</li>  
         
     </ul>
 	

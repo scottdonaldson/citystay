@@ -185,5 +185,16 @@ $(document).ready(function(){
 			}
 		};
 	}
+});
 
+$(window).load(function(){
+	$('.flexslider').flexslider({
+		animation: 'slide',
+		directionNav: false,
+		slideshowSpeed: 5000,
+		start: function(){
+			$('.flexslider').removeAttr('style');
+			$('#loading').remove();
+		}
+	});
 });

@@ -26,7 +26,7 @@ if (!isset($lang)) { $lang = 'en'; }
     
     <link rel="author" href="<?php echo bloginfo('template_url'); ?>/humans.txt">
 
-    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/style.css">
+    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/style.css?v=20130709">
     <script src="<?php echo bloginfo('template_url'); ?>/js/vendor/modernizr.js"></script>
 <?php wp_head(); ?>
 
@@ -101,8 +101,19 @@ if (!isset($lang)) { $lang = 'en'; }
 </header>
 
 <?php if (is_front_page()) { ?>
-<div class="full-width clearfix" id="video">
-    <iframe src="http://player.vimeo.com/video/58222220?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<div class="full-width clearfix" id="slideshow">
+    <h3 id="loading" class="aligncenter" style="background: #F4F2EC; padding-top: 18%;">Loading...</h3>
+    <div class="flexslider">
+        <script>
+        var loading = document.getElementById('loading');
+        loading.style.height = (0.3667 * parseInt(getComputedStyle(loading).width)) + 'px';
+        </script>
+        <ul class="slides">
+            <?php while (has_sub_field('photos')) { ?>
+                <li><img src="<?php the_sub_field('photo'); ?>"></li>
+            <?php } ?>
+        </ul>
+    </div>
 </div>
 <?php } ?>
 

@@ -82,8 +82,8 @@ if (!isset($lang)) { $lang = 'en'; }
 
 </div><!-- #page -->
 
-<script src="<?php echo bloginfo('template_url'); ?>/js/plugins.js"></script>
-<script src="<?php echo bloginfo('template_url'); ?>/js/script.js"></script>
+<script src="<?php echo bloginfo('template_url'); ?>/js/plugins.js?v=20130709"></script>
+<script src="<?php echo bloginfo('template_url'); ?>/js/script.js?v=20130709"></script>
 
 <script>
 	jQuery(document).ready(function($){
