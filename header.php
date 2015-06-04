@@ -19,7 +19,7 @@ setcookie('citystay_lang', $lang, 0, '/');
 
     <link rel="author" href="<?php echo bloginfo('template_url'); ?>/humans.txt">
 
-    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/style.css?v=20130709">
+    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/css/style.css">
     <script src="<?php echo bloginfo('template_url'); ?>/js/vendor/modernizr.js"></script>
 <?php wp_head(); ?>
 
@@ -98,7 +98,15 @@ setcookie('citystay_lang', $lang, 0, '/');
     <div class="hero-background" style="opacity: 0;"></div>
     <div class="vcenter aligncenter">
         <h2 class="ekjsa">Lorem ipsum dolor sit amet</h2>
-        <img class="play-video" src="<?php echo bloginfo('template_url'); ?>/images/play.png">
+
+        <div class="play-video-button clearfix">
+            <svg class="play-video" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+                <circle stroke-width="8" stroke-miterlimit="10" cx="100" cy="100" r="96"/>
+                <path d="M68.421,56.571C65.439,55.157,63,56.7,63,60v80c0,3.3,2.439,4.843,5.421,3.429l86.158-40.857 c2.981-1.414,2.981-3.728,0-5.142L68.421,56.571z"/>
+            </svg>
+            <p>Learn more</p>
+        </div>
+
     </div>
 </div>
 <script>
@@ -122,7 +130,7 @@ setcookie('citystay_lang', $lang, 0, '/');
         function showModal() { modal.fadeIn(); }
 
         $('.hero-background').animate({ opacity: 0.8 }, 1000);
-        $('.play-video').click(function() {
+        $('.play-video-button').click(function() {
 
             showModal();
 
