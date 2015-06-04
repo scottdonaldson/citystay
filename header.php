@@ -94,20 +94,26 @@ setcookie('citystay_lang', $lang, 0, '/');
 </header>
 
 <?php if (is_front_page()) { ?>
-<div class="full-width clearfix" id="slideshow">
-    <h3 id="loading" class="aligncenter" style="background: #F4F2EC; padding-top: 18%;">Loading...</h3>
-    <div class="flexslider">
-        <script>
-        var loading = document.getElementById('loading');
-        loading.style.height = (0.3667 * parseInt(getComputedStyle(loading).width)) + 'px';
-        </script>
-        <ul class="slides">
-            <?php while (has_sub_field('photos')) { ?>
-                <li><img src="<?php the_sub_field('photo'); ?>"></li>
-            <?php } ?>
-        </ul>
+<div id="hero" class="hero">
+    <div class="hero-background" style="opacity: 0;"></div>
+    <div class="vcenter aligncenter">
+        <h2 class="ekjsa">Lorem ipsum dolor sit amet</h2>
+        <img class="play-video" src="<?php echo bloginfo('template_url'); ?>/images/play.png">
     </div>
 </div>
+<script>
+(function() {
+    var hero = document.getElementById('hero');
+    function resizeHero() {
+        hero.style.height = 0.36 * (+getComputedStyle(hero).width.replace('px', '')) + 'px';
+    };
+    resizeHero();
+    window.addEventListener('resize', resizeHero);
+
+    $('.hero-background').animate({ opacity: 0.8 }, 1000);
+
+})();
+</script>
 <?php } ?>
 
 <div id="main" role="main" class="full-width clearfix">

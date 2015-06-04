@@ -1,21 +1,19 @@
-<?php 
+<?php
 /*
 Template Name: Main
 */
-get_header(); the_post(); 
-$lang = $_GET['lang'] ? $_GET['lang'] : $_COOKIE['citystay_lang'];
-if (!isset($lang)) { $lang = 'en'; }
+get_header(); the_post();
+$lang = set_lang();
 ?>
 
 <section <?php post_class(); ?>>
-	
-	
+
 	<h2><a href="<?php echo home_url(); ?>/students" title="Students">
     	<?php if ($lang == 'es') { echo 'El Programa'; } elseif ($lang == 'so') { echo 'The Program'; } else { echo 'The Program'; } ?>
     </a></h2>
    		<ul class="clearfix" id="program">
 			<li class="one-third" id="homestay">
-            	<?php 
+            	<?php
 				if ($lang == 'es') { ?>
 	            	<h3>Estad&iacute;a</h3>
     	            	<p><?php the_field('homestay_es'); ?></p>
@@ -28,7 +26,7 @@ if (!isset($lang)) { $lang = 'en'; }
                 <?php } ?>
         	 </li>
              <li class="one-third" id="coursework">
-             	<?php 
+             	<?php
 				if ($lang == 'es') { ?>
 	            	<h3>Estudio</h3>
                 		<p><?php the_field('coursework_es'); ?></p>
@@ -41,7 +39,7 @@ if (!isset($lang)) { $lang = 'en'; }
                 <?php } ?>
        		</li>
             <li class="one-third last" id="work">
-             	<?php 
+             	<?php
 				if ($lang == 'es') { ?>
 	            	<h3>Trabajo</h3>
                 		<p><?php the_field('work_es1'); ?></p>
@@ -52,10 +50,10 @@ if (!isset($lang)) { $lang = 'en'; }
                 	<h3>Work</h3>
                 		<p><?php the_field('work'); ?></p>
                 <?php } ?>
-       		</li>  
-        
+       		</li>
+
     </ul>
-	
+
 
 </section>
 
