@@ -491,6 +491,12 @@ nav {
 	margin: 0 0 1em;
 }
 
+	@media screen and (min-width: 1100px) {
+		.hero h2 {
+			font-size: 42px;
+		}
+	}
+
 .hero-background {
 	background-image: url(http://www.mycitystay.org/wp-content/uploads/2012/12/classroom.jpg);
 	background-repeat: no-repeat;
@@ -1315,6 +1321,7 @@ html[xmlns] .slides {display: block;}
 }
 
 #close-modal {
+	cursor: pointer;
 	position: absolute;
 	top: 0;
 	right: 0;
