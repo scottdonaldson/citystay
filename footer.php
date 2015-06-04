@@ -1,37 +1,36 @@
 <?php
-$lang = $_GET['lang'] ? $_GET['lang'] : $_COOKIE['citystay_lang']; 
-if (!isset($lang)) { $lang = 'en'; }
+$lang = set_lang();
 ?>
-</div><!-- #main -->   
+</div><!-- #main -->
 
 <footer class="full-width primary clearfix">
 	<article class="two-thirds" id="newsfeed">
-  		<?php 
+  		<?php
 		if ($lang == 'es') { ?>
 	        <h2>Las Noticias Recientes</h2>
-    	<?php 
+    	<?php
 		} elseif ($lang == 'so') { ?>
         	<h2>Latest Story</h2>
-        <?php 
+        <?php
 		} else { ?>
         	<h2>Latest Story</h2>
-        <?php 
+        <?php
 		}
-		
+
         $news = new WP_query('posts_per_page=1');
         while ($news->have_posts()) : $news->the_post(); ?>
             <h3>
-				<?php 
+				<?php
 				if ($lang == 'es' && get_field('title_es')) {
 					the_field('title_es');
 				} elseif ($lang == 'so' && get_field('title_so')) {
-					the_field('title_so'); 
+					the_field('title_so');
 				} else {
 					the_title();
 				} ?>
             </h3>
         	<p>
-				<?php 
+				<?php
 				if ($lang == 'es' && get_field('body_es')) {
 					short_excerpt(get_field('body_es'), 22); ?>
                     </p>
@@ -40,14 +39,14 @@ if (!isset($lang)) { $lang = 'en'; }
 					short_excerpt(get_field('body_so'), 22); ?>
                     </p>
                     <a class="more" href="<?php the_permalink(); ?>">READ MORE</a>
-				<?php } else {	
+				<?php } else {
 					short_excerpt(get_the_excerpt(), 22); ?>
                     </p>
                     <a class="more" href="<?php the_permalink(); ?>">READ MORE</a>
 				<?php } ?>
         <?php endwhile; wp_reset_postdata(); ?>
     </article>
-    
+
     <ul class="one-third last eksja" id="connect">
 		<li id="donate"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XRDFK4XLDZUTN" target="_blank">
         	<?php if ($lang == 'es') { echo 'Done Ahora'; } elseif ($lang == 'so') { echo 'DONATE'; } else { echo 'DONATE'; } ?>
@@ -75,9 +74,9 @@ if (!isset($lang)) { $lang = 'en'; }
         <p class="alignleft">Spanish translation by <a href="mailto: maidaca85@gmail.com">Marco Dávila</a></p>
         <p class="alignleft">Somali translation by <a href="mailto: maham008@umn.edu">Bahjo Mahamud</a></p>
     </div>
-    
-	
-</footer> 
+
+
+</footer>
 
 </div><!-- #page -->
 
@@ -92,7 +91,7 @@ if (!isset($lang)) { $lang = 'en'; }
 	});
 </script>
 
-<?php wp_footer(); 
+<?php wp_footer();
 
 if (!is_user_logged_in()) { ?>
 <script type="text/javascript">

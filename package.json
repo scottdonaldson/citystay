@@ -1,0 +1,11 @@
+{
+  "name": "citystay",
+  "version": "1.0.0",
+  "devDependencies": {
+    "fs": "0.0.2",
+    "gm": "^1.18.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}

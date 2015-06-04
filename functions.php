@@ -5,6 +5,17 @@ register_nav_menu('english', 'English Menu');
 register_nav_menu('spanish', 'Spanish Menu');
 register_nav_menu('somali', 'Somali Menu');
 
+// Set the language
+function set_lang() {
+    // default to English
+    $lang = 'en';
+    // prefer $_GET URL param
+    if ( isset($_GET['lang']) ) { $lang = $_GET['lang']; }
+    // if no URL param, check for cookie
+    if ( isset($_COOKIE['lang']) ) { $lang = $_COOKIE['lang']; }
+    return $lang;
+}
+
 // Create short excerpt and edit regular excerpt more
 function short_excerpt($string, $wordsreturned) {
   $retval = $string;
