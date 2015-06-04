@@ -74,9 +74,13 @@ $lang = set_lang();
         <p class="alignleft">Spanish translation by <a href="mailto: maidaca85@gmail.com">Marco Dávila</a></p>
         <p class="alignleft">Somali translation by <a href="mailto: maham008@umn.edu">Bahjo Mahamud</a></p>
     </div>
-
-
 </footer>
+
+<div class="modal-container">
+	<div id="modal">
+		<div id="close-modal"></div>
+	</div>
+</div>
 
 </div><!-- #page -->
 

@@ -1295,3 +1295,34 @@ html[xmlns] .slides {display: block;}
   .flex-direction-nav .flex-prev {opacity: 1; left: 0;}
   .flex-direction-nav .flex-next {opacity: 1; right: 0;}
 }
+
+.modal-container {
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	padding: 5%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+}
+
+#modal {
+	background: #F4F2EC;
+	height: 100%;
+	width: 100%;
+}
+
+#close-modal {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 1em;
+}
+
+#close-modal:after {
+	display: block;
+	content: '✖';
+	font-size: 2em;
+}

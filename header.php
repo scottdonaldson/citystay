@@ -103,15 +103,52 @@ setcookie('citystay_lang', $lang, 0, '/');
 </div>
 <script>
 (function() {
-    var hero = document.getElementById('hero');
+    var hero = document.getElementById('hero'),
+        iframeID = 'iframe-video';
     function resizeHero() {
         hero.style.height = 0.36 * (+getComputedStyle(hero).width.replace('px', '')) + 'px';
     };
     resizeHero();
     window.addEventListener('resize', resizeHero);
 
-    $('.hero-background').animate({ opacity: 0.8 }, 1000);
+    $(document).ready(function(){
 
+        var modal = $('.modal-container');
+
+        function hideModal() {
+            modal.fadeOut();
+            $('#' + iframeID).remove();
+        }
+        function showModal() { modal.fadeIn(); }
+
+        $('.hero-background').animate({ opacity: 0.8 }, 1000);
+        $('.play-video').click(function() {
+
+            showModal();
+
+            var iframe = document.createElement('iframe');
+            iframe.style.border = 0;
+            iframe.id = iframeID;
+            iframe.src = 'https://drive.google.com/file/d/0B7U3EVz_kFTrc21RN3R1elNNbUE/preview?autoplay=1';
+            iframe.classList.add('aligncenter', 'vcenter');
+            iframe.width = '80%';
+            iframe.height = '80%';
+
+            document.getElementById('modal').appendChild(iframe);
+        });
+
+        $('#close-modal').click(hideModal);
+
+        $('.modal-container').click(function(e){
+            if ( e.target.id !== 'modal' ) hideModal();
+        });
+
+        window.addEventListener('keydown', function(e){
+            if ( e.keyCode === 27 ) {
+                hideModal();
+            }
+        })
+    });
 })();
 </script>
 <?php } ?>
