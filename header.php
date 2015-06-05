@@ -97,7 +97,13 @@ setcookie('citystay_lang', $lang, 0, '/');
 <div id="hero" class="hero">
     <div class="hero-background" style="opacity: 0;"></div>
     <div class="vcenter aligncenter">
-        <h2 class="ekjsa">Lorem ipsum dolor sit amet</h2>
+
+        <h2 class="ekjsa" id="tagline">
+            <span>Tagline in English goes here</span>
+            <span>The Spanish tagline appears</span>
+            <span>Here comes the tagline in Somali</span>
+            <span>And now the Hmong tagline</span>
+        </h2>
 
         <div class="play-video-button clearfix">
             <svg class="play-video" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
@@ -111,13 +117,27 @@ setcookie('citystay_lang', $lang, 0, '/');
 </div>
 <script>
 (function() {
+
     var hero = document.getElementById('hero'),
+        tagline = $('#tagline span'),
         iframeID = 'iframe-video';
+
     function resizeHero() {
         hero.style.height = 0.36 * (+getComputedStyle(hero).width.replace('px', '')) + 'px';
     };
     resizeHero();
     window.addEventListener('resize', resizeHero);
+
+    function showNextTag() {
+        var visible = tagline.filter(function(){
+            return $(this).is(':visible');
+        }),
+        next = visible.next().length ? visible.next() : tagline.first();
+        visible.fadeOut(function(){
+            next.fadeIn();
+        });
+    }
+    setInterval(showNextTag, 3500);
 
     $(document).ready(function(){
 
