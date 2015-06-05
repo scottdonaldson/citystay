@@ -99,10 +99,10 @@ setcookie('citystay_lang', $lang, 0, '/');
     <div class="vcenter aligncenter">
 
         <h2 class="ekjsa" id="tagline">
-            <span>Tagline in English goes here</span>
-            <span>The Spanish tagline appears</span>
-            <span>Here comes the tagline in Somali</span>
-            <span>And now the Hmong tagline</span>
+            <span class="cream">Tagline in English goes here</span>
+            <span class="lightyellow">The Spanish tagline appears</span>
+            <span class="lightorange">Here comes the tagline in Somali</span>
+            <span class="darkyellow">And now the Hmong tagline</span>
         </h2>
 
         <div class="play-video-button clearfix">
