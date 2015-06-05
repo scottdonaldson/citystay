@@ -110,7 +110,7 @@ setcookie('citystay_lang', $lang, 0, '/');
                 <circle stroke-width="8" stroke-miterlimit="10" cx="100" cy="100" r="96"/>
                 <path d="M68.421,56.571C65.439,55.157,63,56.7,63,60v80c0,3.3,2.439,4.843,5.421,3.429l86.158-40.857 c2.981-1.414,2.981-3.728,0-5.142L68.421,56.571z"/>
             </svg>
-            <p>Learn more</p>
+            <p class="eksja">Learn more</p>
         </div>
 
     </div>
