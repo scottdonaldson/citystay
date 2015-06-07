@@ -107,7 +107,6 @@ setcookie('citystay_lang', $lang, 0, '/');
 
         <div class="play-video-button clearfix">
             <svg class="play-video" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
-                <circle stroke-width="8" stroke-miterlimit="10" cx="100" cy="100" r="96"/>
                 <path d="M68.421,56.571C65.439,55.157,63,56.7,63,60v80c0,3.3,2.439,4.843,5.421,3.429l86.158-40.857 c2.981-1.414,2.981-3.728,0-5.142L68.421,56.571z"/>
             </svg>
             <p class="eksja">Learn more</p>
@@ -118,15 +117,8 @@ setcookie('citystay_lang', $lang, 0, '/');
 <script>
 (function() {
 
-    var hero = document.getElementById('hero'),
-        tagline = $('#tagline span'),
+    var tagline = $('#tagline span'),
         iframeID = 'iframe-video';
-
-    function resizeHero() {
-        hero.style.height = 0.36 * (+getComputedStyle(hero).width.replace('px', '')) + 'px';
-    };
-    resizeHero();
-    window.addEventListener('resize', resizeHero);
 
     function showNextTag() {
         var visible = tagline.filter(function(){

@@ -482,7 +482,20 @@ nav {
 
 .hero {
 	background-color: $darkblue;
-	padding: 0 1em;
+	height: 36vw;
+	padding: 0 2em;
+
+	@media screen and (max-width: 540px) {
+		height: 40vw;
+	}
+
+	@media screen and (max-width: 500px) {
+		height: 46vw;
+	}
+
+	@media screen and (max-width: 460px) {
+		height: 52vw;
+	}
 }
 
 #tagline {
@@ -491,6 +504,10 @@ nav {
 
 	@media screen and (min-width: 1100px) {
 		font-size: 42px;
+	}
+
+	@media screen and (max-width: 540px) {
+		font-size: 22px;
 	}
 
 	span { display: none; }
@@ -530,13 +547,16 @@ nav {
 		margin: 0;
 		text-transform: uppercase;
 		transition: 0.25s color;
+
+		@media screen and (max-width: 540px) { font-size: 0.9em; }
 	}
 
 	&:active, &:hover, &:focus {
 		background: $darkblue;
-		circle { stroke: $cream; }
 		p { color: $cream; }
 	}
+
+	@media screen and (max-width: 540px) { width: 170px; }
 }
 
 .play-video {
@@ -544,15 +564,11 @@ nav {
 	margin-left: -12px;
 	vertical-align: middle;
 	width: 30px;
+
+	path { fill: $cream; }
+
+	@media screen and (max-width: 540px) { width: 24px; }
 }
-
-	.play-video circle {
-		display: none;
-	}
-
-	.play-video path {
-		fill: $cream;
-	}
 
 .home #main h2 {
 	padding-top: 10px;
