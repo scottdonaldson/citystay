@@ -78,11 +78,12 @@ h4 {
 	color: $darkyellow;
 }
 
-.vcenter {
+@mixin vcenter {
 	top: 50%;
 	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
 }
+
+.vcenter { @include vcenter; }
 
 .error404 h1,
 .error404 h4 {
@@ -507,11 +508,14 @@ nav {
 	}
 
 	@media screen and (max-width: 540px) {
+		height: 18vw;
 		font-size: 22px;
+
+		div { @include vcenter; }
 	}
 
-	span { display: none; }
-	span:first-child { display: block; }
+	div { display: none; }
+	div:first-child { display: block; }
 }
 
 .hero-background {

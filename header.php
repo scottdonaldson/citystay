@@ -99,10 +99,10 @@ setcookie('citystay_lang', $lang, 0, '/');
     <div class="vcenter aligncenter">
 
         <h2 class="ekjsa" id="tagline">
-            <span class="cream">Tagline in English goes here</span>
-            <span class="lightyellow">The Spanish tagline appears</span>
-            <span class="lightorange">Here comes the tagline in Somali</span>
-            <span class="darkyellow">And now the Hmong tagline</span>
+            <div class="cream">Tagline in English goes here</div>
+            <div class="lightyellow">The Spanish tagline appears</div>
+            <div class="lightorange">Here comes the tagline in Somali</div>
+            <div class="darkyellow">And now the Hmong tagline</div>
         </h2>
 
         <div class="play-video-button clearfix">
@@ -117,7 +117,7 @@ setcookie('citystay_lang', $lang, 0, '/');
 <script>
 (function() {
 
-    var tagline = $('#tagline span'),
+    var tagline = $('#tagline div'),
         iframeID = 'iframe-video';
 
     function showNextTag() {
