@@ -99,10 +99,10 @@ setcookie('citystay_lang', $lang, 0, '/');
     <div class="vcenter aligncenter">
 
         <h2 class="ekjsa" id="tagline">
-            <div class="cream">Tagline in English goes here</div>
-            <div class="lightyellow">The Spanish tagline appears</div>
-            <div class="lightorange">Here comes the tagline in Somali</div>
-            <div class="darkyellow">And now the Hmong tagline</div>
+            <div class="cream">Sparking unlikely connections</div>
+            <div class="lightyellow">Nyob thaj yeeb ua ke</div>
+            <div class="lightorange">Isku tallaalka laba dhaqan oo kala&nbsp;dheeraa</div>
+            <div class="darkyellow">Fomentando conexiones inusuales</div>
         </h2>
 
         <div class="play-video-button clearfix">
