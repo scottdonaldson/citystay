@@ -109,7 +109,7 @@ setcookie('citystay_lang', $lang, 0, '/');
             <svg class="play-video" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
                 <path d="M68.421,56.571C65.439,55.157,63,56.7,63,60v80c0,3.3,2.439,4.843,5.421,3.429l86.158-40.857 c2.981-1.414,2.981-3.728,0-5.142L68.421,56.571z"/>
             </svg>
-            <p class="eksja">Learn more</p>
+            <p class="eksja">Learn More</p>
         </div>
 
     </div>
@@ -149,7 +149,7 @@ setcookie('citystay_lang', $lang, 0, '/');
             var iframe = document.createElement('iframe');
             iframe.style.border = 0;
             iframe.id = iframeID;
-            iframe.src = 'https://www.youtube.com/embed/YRxjGR9WCcc?autoplay=1&rel=0&controls=0';
+            iframe.src = 'https://www.youtube.com/embed/YRxjGR9WCcc?autoplay=1&rel=0&controls=2&modestbranding=1&showinfo=0&autohide=1';
             iframe.classList.add('aligncenter', 'vcenter');
             iframe.width = '80%';
             iframe.height = '80%';
