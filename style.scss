@@ -520,7 +520,6 @@ nav {
 }
 
 .hero-background {
-	background-image: url(http://www.mycitystay.org/wp-content/uploads/2012/12/classroom.jpg);
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -543,7 +542,7 @@ nav {
 	width: 195px;
 	transition: 0.25s background;
 
-	circle, path { transition: 0.25s stroke, 0.25s fill; }
+	path { transition: 0.25s stroke, 0.25s fill; }
 
 	p {
 		color: $cream;
@@ -562,6 +561,11 @@ nav {
 	}
 
 	@media screen and (max-width: 540px) { width: 170px; }
+
+	@media screen and (min-width: 1100px) {
+		font-size: 1.5em;
+		width: 280px;
+	}
 }
 
 .play-video {
@@ -573,6 +577,7 @@ nav {
 	path { fill: $cream; }
 
 	@media screen and (max-width: 540px) { width: 24px; }
+	@media screen and (min-width: 1100px) { width: 40px; }
 }
 
 .home #main h2 {

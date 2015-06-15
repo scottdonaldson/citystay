@@ -95,7 +95,7 @@ setcookie('citystay_lang', $lang, 0, '/');
 
 <?php if (is_front_page()) { ?>
 <div id="hero" class="hero">
-    <div class="hero-background" style="opacity: 0;"></div>
+    <div class="hero-background" style="background-image: url(<?php the_field('background_image', $post->ID); ?>); opacity: 0;"></div>
     <div class="vcenter aligncenter">
 
         <h2 class="ekjsa" id="tagline">
