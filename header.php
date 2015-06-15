@@ -149,7 +149,7 @@ setcookie('citystay_lang', $lang, 0, '/');
             var iframe = document.createElement('iframe');
             iframe.style.border = 0;
             iframe.id = iframeID;
-            iframe.src = 'https://drive.google.com/file/d/0B7U3EVz_kFTrc21RN3R1elNNbUE/preview?autoplay=1';
+            iframe.src = 'https://www.youtube.com/embed/YRxjGR9WCcc?autoplay=1&rel=0&controls=0';
             iframe.classList.add('aligncenter', 'vcenter');
             iframe.width = '80%';
             iframe.height = '80%';
