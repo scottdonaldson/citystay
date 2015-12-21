@@ -19,7 +19,7 @@ setcookie('citystay_lang', $lang, 0, '/');
 
     <link rel="author" href="<?php echo bloginfo('template_url'); ?>/humans.txt">
 
-    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/css/style.css?v=20150615">
     <script src="<?php echo bloginfo('template_url'); ?>/js/vendor/modernizr.js"></script>
 <?php wp_head(); ?>
 
@@ -120,16 +120,18 @@ setcookie('citystay_lang', $lang, 0, '/');
     var tagline = $('#tagline div'),
         iframeID = 'iframe-video';
 
-    function showNextTag() {
-        var visible = tagline.filter(function(){
-            return $(this).is(':visible');
-        }),
-        next = visible.next().length ? visible.next() : tagline.first();
-        visible.fadeOut(function(){
-            next.fadeIn();
-        });
-    }
-    setInterval(showNextTag, 3500);
+    (function showNextTag() {
+        setTimeout(function() {
+            var visible = tagline.filter(function(){
+                return $(this).is(':visible');
+            }),
+            next = visible.next().length ? visible.next() : tagline.first();
+            visible.fadeOut(function(){
+                next.fadeIn();
+                showNextTag();
+            });
+        }, 2000);
+    })();
 
     $(document).ready(function(){
 
